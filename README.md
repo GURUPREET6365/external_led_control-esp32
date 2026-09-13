@@ -50,7 +50,7 @@ The program configures GPIO 18 as an output and changes its digital state betwee
 * Jumper wires
 * USB cable
 
-> If your ESP32 development board has an onboard LED connected to GPIO 18, an external LED may not be necessary.
+> If your ESP32 development board has an onboard LED connected to GPIO 18, an external LED may not be necessary But generally onboard LED connected to GPIO 2.
 
 ## Code
 
