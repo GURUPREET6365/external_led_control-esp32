@@ -58,26 +58,35 @@ The main program is written in **C++**.
 
 ```cpp
 #include "driver/gpio.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
 
-constexpr gpio_num_t LED_GPIO = GPIO_NUM_18;
+#define GPIO_OUTPUT_IO_18 GPIO_NUM_18
 
 extern "C" void app_main()
 {
-    gpio_set_direction(LED_GPIO, GPIO_MODE_OUTPUT);
+    gpio_reset_pin(GPIO_OUTPUT_IO_18);
+    gpio_set_direction(GPIO_OUTPUT_IO_18, GPIO_MODE_OUTPUT);
+    while (true){
+        gpio_set_level(GPIO_OUTPUT_IO_18, 1); // Turn LED ON
+        vTaskDelay(pdMS_TO_TICKS(100));     // Keep it ON for 2 seconds 
+        
+        gpio_set_level(GPIO_OUTPUT_IO_18, 0); // Turn LED OFF
+        vTaskDelay(pdMS_TO_TICKS(100)); 
 
-    while (true)
-    {
-        gpio_set_level(LED_GPIO, 1);
-        vTaskDelay(pdMS_TO_TICKS(1000));
-
-        gpio_set_level(LED_GPIO, 0);
-        vTaskDelay(pdMS_TO_TICKS(1000));
     }
+
 }
 ```
 
 ### How it works
 
+`gpio_reset_pin()` reset the pin for controlling.
+
+```cpp
+gpio_reset_pin(GPIO_OUTPUT_IO_18);
+
+```
 `gpio_set_direction()` configures GPIO 18 as an output.
 
 ```cpp
@@ -180,33 +189,3 @@ Or build, flash, and monitor in one command:
 ```bash
 idf.py build flash monitor
 ```
-
-## What I Want to Learn Next
-
-This project is the starting point for understanding ESP32 development.
-
-Next, I want to move beyond a simple LED and learn how to control and communicate with different hardware, including:
-
-* GPIO input
-* Buttons and switches
-* PWM
-* ADC
-* UART
-* I2C
-* SPI
-* Sensors
-* Motors and servos
-* Wi-Fi
-* Bluetooth
-* MQTT
-* Interrupts
-* FreeRTOS
-* More complex embedded systems
-
-## Goal
-
-The goal of this repository is not just to make an LED blink.
-
-It is my starting point for understanding **how microcontrollers actually work and how software interacts with hardware**.
-
-I plan to use what I learn here to build progressively more complex ESP32 and embedded-system projects.
