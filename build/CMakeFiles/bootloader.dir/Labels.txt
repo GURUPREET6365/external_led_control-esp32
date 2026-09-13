@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+D:/MainFolder/Embedded/ESP32/external_led_control/build/CMakeFiles/bootloader
+D:/MainFolder/Embedded/ESP32/external_led_control/build/CMakeFiles/bootloader.rule
+D:/MainFolder/Embedded/ESP32/external_led_control/build/CMakeFiles/bootloader-complete.rule
+D:/MainFolder/Embedded/ESP32/external_led_control/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+D:/MainFolder/Embedded/ESP32/external_led_control/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+D:/MainFolder/Embedded/ESP32/external_led_control/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+D:/MainFolder/Embedded/ESP32/external_led_control/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+D:/MainFolder/Embedded/ESP32/external_led_control/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+D:/MainFolder/Embedded/ESP32/external_led_control/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+D:/MainFolder/Embedded/ESP32/external_led_control/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

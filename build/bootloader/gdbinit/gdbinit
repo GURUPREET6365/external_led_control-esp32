@@ -1,0 +1,2 @@
+source D:/MainFolder/Embedded/ESP32/external_led_control/build/bootloader/gdbinit/symbols
+source D:/MainFolder/Embedded/ESP32/external_led_control/build/bootloader/gdbinit/connect
